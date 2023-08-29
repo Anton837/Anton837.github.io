@@ -26,6 +26,7 @@ a:hover {
 	justify-content: space-between;
 	gap: 10px;
 	max-width: 1140px;
+	height: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
 	flex: 1 1;
@@ -146,6 +147,57 @@ a:hover {
 	color: var(--dark);
 	text-decoration: underline;
 }
+
+.first-screen {
+	min-height: 620px;
+	background: linear-gradient(0deg, rgba(47, 52, 58, 0.75) 0%, rgba(47, 52, 58, 0.75) 100%), url(images/mainscreen.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+  	background-size: cover;
+  	display: flex;
+  	flex-direction: column;
+}
+.first-screen>.container {
+	position: relative;
+	min-height: 100%;
+
+}
+.mouse {
+	position: absolute;
+	left: calc(50% - 15px);
+	bottom: 50px;
+	cursor: pointer;	
+}
+.first-screen__content {
+	align-self: center;
+	max-width: 920px;
+	margin: 100px auto;
+	border: 1px solid var(--gold);
+	text-align: center;
+}
+.content {
+	display: flex;
+	padding: 45px;
+	flex-direction: column;
+	gap: 45px;
+	color: white;
+}
+.content__title {
+	font-size: 64px;
+	font-weight: 700;
+	letter-spacing: 3.2px;
+	text-transform: uppercase;
+}
+.content__text {
+	font-size: 18px;
+}
+
+@media(max-width:1140px) {
+	.content__title {
+		font-size: calc(30px + 34*((100vw - 320px)/(1140 - 320)));
+	}
+}
+
 @media(max-width:779px) {
 	.first-line__left {
 		padding-bottom: 15px;
@@ -156,5 +208,19 @@ a:hover {
 	.main-menu {
 		justify-content: space-around;
 		gap: 10px;
+		flex-wrap: wrap;
+	}
+}
+@media(max-width:362px) {
+	.main-menu__item {
+		font-size: 14px;
+	}
+	.first-line__left {
+		gap: 10px;
+	}
+}
+@media(max-width: 468px) {
+	.footer__right {
+		margin-top: 15px;
 	}
 }
