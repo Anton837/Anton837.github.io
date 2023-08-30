@@ -20,6 +20,11 @@ a:hover {
 	--dark: #2F343A;
 	--gold: #C8A35F;
 }
+html {
+  scroll-behavior: smooth;
+  
+}
+
 
 .container {
 	display: flex;
@@ -149,7 +154,7 @@ a:hover {
 }
 
 .first-screen {
-	min-height: 620px;
+	min-height: max(calc(100vh - 145px), 620px);
 	background: linear-gradient(0deg, rgba(47, 52, 58, 0.75) 0%, rgba(47, 52, 58, 0.75) 100%), url(images/mainscreen.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -211,6 +216,13 @@ a:hover {
 		flex-wrap: wrap;
 	}
 }
+
+@media(max-width: 468px) {
+	.footer__right {
+		margin-top: 15px;
+	}
+}
+
 @media(max-width:362px) {
 	.main-menu__item {
 		font-size: 14px;
@@ -219,8 +231,5 @@ a:hover {
 		gap: 10px;
 	}
 }
-@media(max-width: 468px) {
-	.footer__right {
-		margin-top: 15px;
-	}
-}
+
+
